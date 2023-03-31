@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e7d217;
+}
+
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+} 
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="face front">
+            <img src="zofia.webp" alt="">
+            <h3>ZOFIA</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>KS79 LIFELINE es un dispositivo que utiliza la tecnología de lanzamiento electrónico de proyectiles para disparar tanto munición aturdidora como munición de impacto.
+                La munición no letal libera una onda sonora de 170 decibelios que bloquea el sentido del oído y provoca un efecto de mareo que aturde al enemigo.</p>
+            <div class="link">
+                <p>zofia</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="glaz.webp" alt="">
+            <h3>GLAZ</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Glaz es un francotirador de retaguardia, capaz de hacer una demolición ligera y dar fuego de cobertura a distancia.
+                Glaz puede disparar a distancia gracias a su mira especial plegable HDS.</p>
+            <div class="link">
+                <p>Glaz</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="fuze.webp" alt="">
+            <h3>FUZE</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Fuze funciona mejor como agente agresivo de flanqueo y bloqueo de área. Sus habilidades le permiten librarse de elementos defensivos y atacar enemigos atrincherados en posiciones de defensa. La carga de racimo APM-6 de Fuze lanza un grupo de granadas explosivas a través de cualquier superficie susceptible de una demolición débil.</p>
+            <div class="link">
+                <p>fuze</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="iq.webp" alt="">
+            <h3>IQ</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Montado en la muñeca
+                Sensor del tamaño de un teléfono móvi</p>
+            <div class="link">
+                <p>iq</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="bliz.webp" alt="">
+            <h3>BLITZ</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Escudo antibalas
+                Tres filas de ocho granadas cegadoras proporcionan además una potente fuente de luz</p>
+            <div class="link">
+                <p>blitz</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="twich.webp" alt="">
+            <h3>TWITCH</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Twitch es una agente de desarme y de inteligencia, que puede usar sus habilidades para apoyo remoto desde retaguardia, o como agente de entrada rápida y ataque, una agresiva entry fragger.
+                Twitch es capaz de desactivar de forma remota dispositivos con su dron de electrochoque RSD Model 1</p>
+            <div class="link">
+                <p>twitch</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="montaña.webp" alt="">
+            <h3>MONTAÑA</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Al plegarse su tamaño se reduce a la mitad, lo que permite mayor mobilidad de quien lo lleva
+                Compuesto de diferentes aleaciones y kevlar
+                Proporciona protección contra balas de armas cortas y ataques cuerpo a cuerpo</p>
+            <div class="link">
+                <p>montaña</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="termite.webp" alt="">
+            <h3>THERMITE</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Thermite es una pieza importante de apoyo en la retaguardia para un equipo de ataque. Es uno de los pocos demoledores pesados del juego, y perderle demasiado pronto en la ronda reducirá mucho las posibilidades de éxito del equipo. Jugar bien con Thermite requiere paciencia, liderazgo y mucha comunicación con tu equipo.</p>
+            <div class="link">
+                <p>thermite</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="ash.webp" alt="">
+            <h3>ASH</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Ash es una agente veloz de primera línea, capaz de abrir brecha, flanquear y desviar la atencióin de los defensores en cuestión de segundos.
+                Ash puede realizar voladuras pequeñas a distancia, gracias a sus proyectiles demoledores modificados M120 CREM.</p>
+            <div class="link">
+                <p>ash</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="tacher.webp" alt="">
+            <h3>THATCHER</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>La bobina de cobre sirve para generar el pulso electromagnético al girar
+                Medidor LED
+                Se gira 45 grados para activar el dispositivo</p>
+            <div class="link">
+                <p>thatcher</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="slegue.webp" alt="">
+            <h3>SLEDGE</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Sledge es un agente de demolición ligera y de flanqueo, que destaca por crear nuevas líneas de disparo que presionan a los defensores.
+                Sledge puede romper superficies no reforzadas usando su martillo táctico de demolición, el Cáber.</p>
+            <div class="link">
+                <p>sledge</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="buck.webp" alt="">
+            <h3>BUCK</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Escopeta del calibre 12 acoplada bajo el cañón con capacidad para cuatro proyectiles que se usa junto con un fusil de asalto.
+                La Llave Skeleton permite al agente alternar con facilidad y eficacia entre su fusil de asalto estándar y una escopeta de gran potencia.</p>
+            <div class="link">
+                <p>buck</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="black bear.webp" alt="">
+            <h3>BLACK BEAR</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El blindaje transparente está formado por múltiples capas de policarbonato y termoplástico, cubiertas con una lámina de absorción de esquirlas y fragmentos y un cristal laminado ultraligero.
+                Protege al usuario contra impactos de objetos contundentes y fuego de artillería.</p>
+            <div class="link">
+                <p>black bear</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="capitao.webp" alt="">
+            <h3>CAPITAO</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Dispara una ampolla de cristal en un asalto rápido y silencioso contra el enemigo sin descubrir su posición. El cartucho de cristal se rompe al impactar y libera un gas que quema y consume el oxígeno del área cercana.</p>
+            <div class="link">
+                <p>capitao</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="hibana.webp" alt="">
+            <h3>HIBANA</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El X-KAIROS, un lanzador de proyectiles del calibre 40mm, dispara bolas explosivas que pueden detonarse a distancia y simultáneamente.
+                ¡Lleva a cabo asaltos innovadores creando nuevas líneas de disparo o nuevos caminos!</p>
+            <div class="link">
+                <p>hibana</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="jackal.webp" alt="">
+            <h3>JACKAL</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El Eyenox Modelo III se creó para proporcionar un sistema portátil de seguimiento que pudiera identificar y seguir el rastro de las pisadas de una persona determinada, en tiempo real.
+                Gracias a la visión artificial ampliada, el Eyenox detecta detalles que al ojo humano son invisibles, sobre la pisada y la distribución del peso, que permite identificar al objetivo.</p>
+            <div class="link">
+                <p>jackal</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="jing.webp" alt="">
+            <h3>YING</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Inspirado en el material de la nueva generación de granadas aturdidoras de los SAS, su explosivo basado en mercurio y magnesio crea una multitud de destellos cegadores.
+                El dispositivo Candela libera un racimo de cargas flash que pueden anclarse a superficies o bien lanzarse como granadas.</p>
+            <div class="link">
+                <p>ying</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="face front">
+            <img src="dokaeibi.webp" alt="">
+            <h3>DOKKAEBI</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Grace utiliza un portátil militar con blindaje antibalas, con el nombre en clave Bomba Lógica, que le permite hackear dispositivos tácticos enemigos.
+                El programa descarga un virus que ha creado ella misma y que puede superar cortafuegos y hacer que los dispositivos enemigos emitan un potente zumbido, lo que revela su posición.</p>
+            <div class="link">
+                <p>dokaebi</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="finka.webp" alt="">
+            <h3>Finka</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El estímulo de adrenalina de Finka activa nanobots de zinc inyectados previamente en los agentes, que liberan un cóctel farmacológico en su torrente sanguíneo, mientras el zinc se reabsorbe como nutriente. Estas nanocápsulas dan a su equipo un breve impulso de energía, reaniman a los aliados que estén en estado DBNO (caído pero no muerto), y ayudan a estabilizar la puntería. Es la única capaz de adaptar los nanobots a cada agente de forma específica.</p>
+            <div class="link">
+                <p>finka</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="lion.webp" alt="">
+            <h3>LION</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Twitch le proporcionó un dron aéreo mientras servía en el GIGN. El EE-UNO-D ayuda a Lion a mantener los perímetros de cuarentena, detectando cualquier movimiento en el área y dándole una visión precisa de las zonas calientes o del campo de batalla. Su dron puede permanecer en el aire indefinidamente, a la espera, pero solo puede realizar un escaneo en momentos precisos, así que hay que elegir bien.</p>
+            <div class="link">
+                <p>lion</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="maverick.webp" alt="">
+            <h3>MAVERICK</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El soplete casero de Maverick es capaz de atravesar cualquier superficie, desde muros reforzados hasta trampillas. Si el agente tiene una mano firme y un gran conocimiento del entorno, permite crear pequeños agujeros y líneas de visión. Maverick solo puede usar la herramienta muy cerca de la superficie que quiere atravesar. Es muy silenciosa, pero se queda sin combustible rápidamente. Con todo, su enorme precisión la convierte en una herramienta muy creativa que puedes utilizar de manera práctica sin depender de tecnología digital.</p>
+            <div class="link">
+                <p>maverick</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="nomad.webp" alt="">
+            <h3>NOMAD</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El accesorio de fusil personalizado de Nomad le permite lanzar unas granadas especiales llamadas mazazos aéreos, que explotan cuando se lanzan cerca de un enemigo. Pueden adherirse a una superficie y detonar cuando un enemigo está en su rango de alcance. Nomad entra en acción con tres Mazazos Aéreos. Estas granadas de repulsión no son letales, pero desorientan al enemigo.</p>
+            <div class="link">
+                <p>nomad</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="grid.webp" alt="">
+            <h3>GRIDLOCK</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Los discos de espinas son un dispositivo portátil que cuando se activa, despliega un conjunto hexagonal de púas, y cubre mejor que una tira recta los terrenos irregulares. Una vez desplegado, puede replicarse y extenderse sobre un área grande. Esta característica, única para atacantes, permite utilizarlos como obstáculos para rediseñar el mapa y controlar un área. Los efectos sobre el enemigo incluyen ralentizarlos y causarles daños al pisarlos. Los discos de espinas se destruyen cuando reciben un disparo o daño térmico.</p>
+            <div class="link">
+                <p>gridlock</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="kapkan.webp" alt="">
+            <h3>KAPKAN</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Kapkan es un agente trampero y una adición letal al equipo de defensa. Está equipado con un dispositivo de bloqueo de entrada o DBE, el EDD-MK II. Esta trampa es un paquete de explosivo plástico C4 que se activa por detección de movimiento. Se puede colocar en las puertas o ventanas, evitando que los atacantes entren por determinados lugares clave.</p>
+            <div class="link">
+                <p>kapkan</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="tachanka.webp" alt="">
+            <h3>TACHANKA</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El lanzador Shumika, el nuevo dispositivo de Tachanka, es perfecto para defender zonas y cubrir ángulos desfavorables. Sus granadas incendiarias rebotan varias veces y poseen un temporizador que comienza su cuenta atrás después del primer bote, lo que les da una gran versatilidad.
+
+                Tachanka lleva 10 granadas al comienzo de una partida, y el lanzador puede cargar hasta 7. Para garantizar una efectividad máxima, puedes usar varias granadas a la vez y cubrir una zona más amplia; así, tus oponentes no podrán esquivarlas.</p>
+            <div class="link">
+                <p>tachanka</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="bandit.webp" alt="">
+            <h3>BANDIT</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Bandit es un agente anti demolición pesada y de recorrido libre, un roamer capaz de bloquear puntos clave de entrada de los atacantes y de defender el objetivo moviéndose de un lado a otro.
+                Bandit puede electrificar una variedad de superficies gracias a su dispositivo especial, el cable de electrochoque CED-1 (Crude Electrical Device-1).</p>
+            <div class="link">
+                <p>bandit</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="jagyer.webp" alt="">
+            <h3>JAGUER</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Jäger puede ayudar a su equipo a crear una defensa férrea antes de recorrer el mapa para interceptar a los atacantes que llegan por los flancos. Es capaz de destruir proyectiles entrantes, gracias su dispositivo ADS, el sistema de defensa activa.</p>
+            <div class="link">
+                <p>jaguer</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="rook.webp" alt="">
+            <h3>ROOK</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Rook es un agente de tipo ancla y de refuerzo, que puede dar una protección extra a los defensores, lo que aporta una gran ventaja en un tiroteo.
+                Rook se puede proteger a sí mismo y a sus compañeros con las planchas de blindaje R1N "RHINO".</p>
+            <div class="link">
+                <p>rook</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="pulse.webp" alt="">
+            <h3>PULSE</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Pulse es un agente de tipo roamer y de Inteligencia, es decir, recorre el mapa y recoge información para el equipo de defensa. Gracias a su sensor de latido HB-5, Pulse puede detectar a los atacantes a través de las superficies, marcando fácilmente su posición.</p>
+            <div class="link">
+                <p>pulse</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="castle.webp" alt="">
+            <h3>CASTLE</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Castle es un agente ancla y de protección de la zona, capaz de crear una fortaleza alrededor del objetivo y de controlar el movimiento y dirección de los atacantes y de ralentizar su asalto.
+                La habilidad especial de Castle es crear barricadas reforzadas con su panel táctico universal UTP1 (Universal Tactical Panel).</p>
+            <div class="link">
+                <p>castle</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="smoke.webp" alt="">
+            <h3>SMOKE</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Detonador
+                Receptor remoto
+                Cinta de doble cara para colocarlo en una superficie horizontal o vertical</p>
+            <div class="link">
+                <p>smoke</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="mute.webp" alt="">
+            <h3>MUTE</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Antenas plegables
+                El dispositivo puede colocarse sobre el piso
+                Pantalla digital
+                Palancas de activación</p>
+            <div class="link">
+                <p>mute</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="frost.webp" alt="">
+            <h3>FROST</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El felpudo de goma y las mandíbulas metálicas ocultas están atornillados al suelo. Cuando alguien pisa la placa de presión, los dos juegos de mandíbulas le inmovilizan atrapándole a la altura del tobillo y la espinilla.
+                Hacen falta dos personas para soltar las mandíbulas y volver a colocar la trampa.</p>
+            <div class="link">
+                <p>frost</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="valkiria.webp" alt="">
+            <h3>VALKIRIA</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Encajada en una bola de silicona teñida y cubierta de microventosas, esta cámara de despliegue rápido mantiene una visión clara del escenario gracias al giroscopio interno que va ajustando los ángulos de visión de la lente.
+                Las ventosas permiten a la cámara adherirse a cualquier superficie, mientras las lentes montadas sobre el giroscopio estabilizan el ángulo de visión y el enfoque.
+                La señal de vídeo de la cámara llega a todos los agentes del equipo.</p>
+            <div class="link">
+                <p>valkiria</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="echo.webp" alt="">
+            <h3>ECHO</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Equipado con un emisor de ondas acústicas, este dron especial puede disparar ráfagas ultrasónicas que desorientan a los objetivos en un radio cercano. Yokai también transmite señal de vídeo a Echo, para que el agente pueda mantener su perímetro seguro.
+                Aprovecha la potencia de la tecnología y ponte en la piel de un defensor que puede mantener un asedio y apoyar por igual a sus compañeros.</p>
+            <div class="link">
+                <p>echo</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="mira.webp" alt="">
+            <h3>MIRA</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Un cristal laminado especial que, al mezclarse con oxiacetileno, crea un hueco en forma de espejo de una sola dirección, que puedes colocar en cualquier pared.
+                . Cuando la presión del aire se modifica, el cristal sale eyectado, dejando entonces un hueco abierto que ambos, defensores y atacantes, pueden usar.</p>
+            <div class="link">
+                <p>mira</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="lesion.webp" alt="">
+            <h3>LESION</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Las minas Gu están inspiradas en las estacas punji que se usaron durante la guerra de Vietnam. Cubiertos de plantas tóxicas o incluso excrementos, estos afilados palos de bambú servían para ralentizar a las tropas enemigas, al causar graves infecciones entre ellos.
+                De forma similar, las minas Gu inyectan una toxina que hiere al enemigo y limita su velocidad.</p>
+            <div class="link">
+                <p>lesion</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="ela.webp" alt="">
+            <h3>ELA</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Inspiradas en las granadas polacas antitanques de 1939, usadas por los famosos Cichociemny durante la IIGM, las minas adhesivas Grzmot pueden anclarse a superficies y, al estallar, bloquean el oído y producen una acción desorientadora.
+                Estas minas aturdidoras se activan por proximidad y afectan a cualquiera en su radio.</p>
+            <div class="link">
+                <p>ela</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="vigil.webp" alt="">
+            <h3>VIGIL</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El sigilo letal de Chul Kyung sobre el terreno se debe en parte a su Dispositivo Electrónico de Ocultación (ERC-7), que le permite permanecer sin ser detectado.
+                El ERC-7 usa una tecnología de realidad disminuida para eliminar rastros y estímulos percibibles en su entorno directo. Vigil lleva un prototipo en su mochila que escanea el escenario en busca de dispositivos electrónicos de detección, y borra su propia imagen de cualquier cámara o dron.</p>
+            <div class="link">
+                <p>vigil</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="alibi.webp" alt="">
+            <h3>ALIBI</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El Prisma proyecta un holograma idéntico a Alibi cuando está quieta. Si disparas al holograma o lo tocas, quedarás marcado durante varios segundos. Cuando el Prisma se despliega en el exterior, aparece una alarma falsa avisando a los atacantes de que hay un defensor fuera. Para añadir un elemento sorpresa, el dispositivo oculta la identidad de cualquier defensor que esté fuera. Las balas, ataques directos y explosivos dañan al Prisma, y además atraviesan el holograma, así que no te quedes cerca.
+
+            </p>
+            <div class="link">
+                <p>alibi</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="maestro.webp" alt="">
+            <h3>MAESTRO</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Maestro usa un dispositivo blindado de observación con control remoto que además dispara haces de energía láser. Fijada a una pared o al suelo, la cámara del Mal de Ojo ofrece imagen remota para controlar el movimiento en una zona. Cuando se abre la tapa protectora para permitir el disparo del láser, el dispositivo queda expuesto, pero mientras se mantiene cerrada, ni las balas ni los impactos directos provocan ningún daño. Por último, el Mal de Ojo permite ver a través de humo.</p>
+            <div class="link">
+                <p>maestro</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="clash.webp" alt="">
+            <h3>CLASH</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>Clash es la primera agente de defensa que tiene un escudo. El Escudo Antidisturbios con Electrochoque es su arma principal; puede cambiar al arma secundaria cuando quiera, pero antes tiene que dejar el escudo. Es una protección extensible a prueba de balas capaz de ralentizar a los enemigos con un generador de campo eléctrico (GCE) que el escudo emite hacia delante, con forma cilíndrica. El GCE no solo ralentiza a los oponentes a los que alcanza, sino que también les provoca daños débiles con el tiempo. La gran efectividad del escudo permite a Clash bloquear accesos, y prevenir o retrasar una carga de los agentes de ataque.</p>
+            <div class="link">
+                <p>clash</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="kaid.webp" alt="">
+            <h3>KAID</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>La electrogarra de Kaid, "Rtila", puede electrificar paredes reforzadas y trampillas, alambre de espino y escudos extensibles, lo que dificulta al enemigo tomar la fortaleza y cualquier instalación que quiera asaltar. Kaid entra en el campo de batalla con dos unidades del dispositivo, que puede lanzar hacia cualquier superficie; cuando se anclan a ella, electifican objetos metálicos en un radio de 0,75 metros.
+
+            </p>
+            <div class="link">
+                <p>kaid</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="moozie.webp" alt="">
+            <h3>MOOZIE</h3>
+        </div>
+        <div class="face back">
+            <h3>Habilidad</h3>
+            <p>El Lanzador de plaga de Mozzie consiste en diminutos robots de 4 patas que pueden usarse para marcar a un solo dron, o bien desplegarlo en un área para evitar el acceso a un dron. Cuando se lanza, se engancha al dron enemigo más cercano y oscurece su cámara. Entonces se inicia una secuencia de anulación para hackear el dron y le da el control a Mozzie. Evita la recogida de datos por parte del enemigo sin riesgo a un hackeo. Es un dispositivo de un solo uso, ya que se autodestruye y se desvanece en el aire una vez que el objetivo se encuentra bajo el control de Mozzie.</p>
+            <div class="link">
+                <p>moziie</p>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
